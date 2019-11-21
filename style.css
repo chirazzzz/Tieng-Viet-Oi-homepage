@@ -1,0 +1,201 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 1.2;
+  color: #3a3a3a;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+#header,
+#sign-up,
+#nav-bar {
+  display: flex;
+}
+
+#header {
+  background: #fff;
+  width: 100%;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+}
+
+#header-img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+#nav-bar {
+  flex-direction: row;
+  text-align: center;
+}
+
+#header-img,
+#nav-bar {
+  display: block;
+}
+
+#nav-bar li {
+  margin-bottom: 5px;
+}
+
+#nav-bar a {
+  color: #3a3a3a;
+  text-transform: uppercase;
+}
+
+#nav-bar a:hover {
+  color: #A71734;
+}
+
+/* ---- Layout Containers ---- */
+
+#sign-up {
+  background: #f0f0f0;
+  margin-top: 205px;
+  margin-bottom: 1em;
+}
+
+#sign-up,
+#course-info,
+footer {
+  text-align: center;
+}
+
+.container,
+iframe {
+  margin: 0 auto;
+}
+
+.container {
+  width: 90%;
+}
+
+iframe {
+  display: block;
+}
+
+footer {
+  margin-top: 2em;
+  padding: 2em 0;
+	background: #d9e4ea;
+}
+
+/* ---- Page Elements ---- */
+
+#form {
+  padding-bottom: 20px;
+}
+
+#submit {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+#email {
+  max-width: 250px;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  border-width: 2px;
+}
+
+#sign-up p {
+  margin: 20px auto;
+  text-align: left;
+}
+
+#course {
+  margin-bottom: 20px;
+}
+
+.features {
+  margin: 1.5em 1.5em 0 1.5em;
+  text-align: left;
+}
+
+.desc {
+  margin-bottom: 4em;
+}
+
+.desc h2,
+.desc p {
+  margin: 0;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (max-width: 550px) {
+  .fas {
+    display: none;
+  }
+  .desc {
+    text-align: center;
+  }
+  #header,
+  #sign-up {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 551px) {
+  #header-img {
+    width: 35vw;
+    max-width: 250px;
+  }
+  #nav-bar ul {
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #nav-bar li:nth-child(-n+2) {
+    margin-right: 5%;
+  }
+  #sign-up {
+    margin-top: 130px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 100px auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container {
+    width: 80%;
+    max-width: 1150px;
+  }
+}
